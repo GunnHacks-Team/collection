@@ -62,7 +62,8 @@ body {
   transition: background 0.05s ease-in-out;
 }
 
-#copy {
+#copy,
+#skip {
   width: 100px;
   height: 50px;
   font-size: 30px;
@@ -73,7 +74,8 @@ body {
   transition: filter 0.1s;
 }
 
-#copy:hover {
+#copy:hover,
+#skip:hover {
   filter: brightness(0.8);
 }
 

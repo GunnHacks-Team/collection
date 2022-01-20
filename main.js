@@ -1,6 +1,7 @@
 const color = document.querySelector("#color");
 const table = document.querySelector("#table > tbody");
 const copy = document.querySelector("#copy");
+const skip = document.querySelector("#skip");
 const copied = document.querySelector("#copied");
 let r, g, b;
 
@@ -14,7 +15,7 @@ randomColor();
 
 const data = [];
 let curr = 0;
-const colors = ["white", "pink", "yellow", "orange", "green", "blue", "red", "black"];
+const colors = ["white", "yellow", "orange", "green", "blue", "red", "black"];
 for (const c of colors) {
   const el = document.querySelector(`#${c}`);
   el.addEventListener("click", () => {
@@ -45,4 +46,8 @@ for (const c of colors) {
 let rem;
 copy.addEventListener("click", () => {
   navigator.clipboard.writeText(JSON.stringify(data));
+});
+
+skip.addEventListener("click", () => {
+  randomColor();
 });
